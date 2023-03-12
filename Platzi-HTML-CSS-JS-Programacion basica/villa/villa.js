@@ -46,37 +46,31 @@ cerdo.imagen = new Image();
 cerdo.imagen.src = cerdo.url;
 cerdo.imagen.addEventListener("load", cargarCerdo);
 
-function cargarFondo()
-{
+function cargarFondo(){
   fondo.cargaOK = true;
   dibujar();
 }
-function cargarVacas()
-{
+
+function cargarVacas(){
   vaca.cargaOK = true;
   dibujar();
 }
 
-function cargarPollos()
-{
+function cargarPollos(){
   pollo.cargaOK = true;
   dibujar();
 }
 
-function cargarCerdo()
-{
+function cargarCerdo(){
   cerdo.cargaOK = true;
   dibujar();
 }
 
-function dibujar()
-{
-  if(fondo.cargaOK)
-  {
+function dibujar(){
+  if(fondo.cargaOK){
     papel.drawImage(fondo.imagen, 0, 0);
   }
-  if(vaca.cargaOK)
-  {
+  if(vaca.cargaOK){
     var cantidad = aleatorio(2, 20);
     console.log(cantidad);
     for(var v = 0; v < cantidad; v++)
@@ -88,8 +82,8 @@ function dibujar()
     papel.drawImage(vaca.imagen, x, y);
    }
   }
-  if(pollo.cargaOK)
-  {
+
+  if(pollo.cargaOK){
     var cantidad = aleatorio(2, 20);
     console.log(cantidad);
     for(var p = 0; p < cantidad; p++)
@@ -101,19 +95,17 @@ function dibujar()
     papel.drawImage(pollo.imagen, x, y);
    }
   }
-  if(cerdo.cargaOK)
-  {
+
+  if(cerdo.cargaOK){
    papel.drawImage(cerdo.imagen, cerx, cery);
   }
 }
 
 
-function moverCerdo(cerdito)
-{
+function moverCerdo(cerdito){
   var movimiento = 15;
 
-  switch(cerdito.keyCode)
-  {
+  switch(cerdito.keyCode){
 		case cerdo.UP:
 		
 			cery -= movimiento;
@@ -148,8 +140,7 @@ function moverCerdo(cerdito)
   }
 }
 
-function aleatorio(mini, maxi)
-{
+function aleatorio(mini, maxi){
   var resultado;
   resultado = Math.floor(Math.random() * (maxi - mini + 1)) + mini;
   return resultado;

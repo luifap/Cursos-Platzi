@@ -1,7 +1,7 @@
 var d = document.getElementById("dibujito");
 var lienzo = d.getContext("2d");
-var lineas = 30;
-var l = 0;
+var lineas = 30; //limite del ciclo
+var l = 0; //iniciación edl ciclo
 var yi, xf, xi, yf;
 
 
